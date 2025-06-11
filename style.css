@@ -159,13 +159,59 @@ header li > a{
     display: flex;
     position: relative;
     line-height: inherit;
+    transition: var(--trns-color);
 }
 
 /* header top */
+.header-top .wrapper{
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    justify-content: space-between;
+    line-height: 42px;
+}
+.header-top .wrapper ul{
+    gap: 2em;
+}
+.header-top li{
+    position: relative;
+}
+.header-top ul ul{
+    position: absolute;
+    left: -1em;
+    line-height: 2em;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    z-index: 1;
+    display: none;
+}
+.header-top .right ul ul li a{
+    padding: 0.25em 1em;
+}
+.header-top .right ul ul li.current a{
+    background-color: var(--border-color);
+}
+.header-top li:hover ul{
+    display: block;
+}
 
 
 
+/* header nav */
+.trigger{
+    font-size: 1.5em;
+    display: flex;
+    padding: 0.25em;
+    margin-right: 0.5em;
+}
+.logo a{
+    font-family: 'Poppins', Arial,sans-serif;
+    font-size: 1.75em;
+    position: relative;
+    font-weight: var(--fw8);
+    display: flex;
+    padding-left: 0.7em;
 
+}
 
 
 
@@ -258,5 +304,8 @@ header li > a{
 @media screen and(min-width: 992px) {
     .container{
         padding: 0 2em;
+    }
+    .desktop-hide{
+        display: none;
     }
 }
