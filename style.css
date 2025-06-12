@@ -138,11 +138,14 @@ h4{
 }
 .icon-small{
     font-size: 1.25em;
-    margin: auto;
+    margin-left: auto;
 }
 .icon-large{
     font-size: 1.75em;
     padding: 0 0.75em 0 0;
+}
+.img-icon{
+    width: 1.05em;
 }
 
 .mobile-hide{
@@ -282,6 +285,12 @@ header li > a{
 
 }
 
+.dpt-menu>ul>li>a{
+    font-size: var(--font-small);
+    height: 46px;
+    align-items: center;
+}
+
 /* header: buscador/search */
 .header-main .right{
     flex: 1;
@@ -321,6 +330,22 @@ form.search button{
 }
 form.search button:hover{
     background-color: var(--dark-color);
+}
+
+/* mennu categorias */
+.dpt-menu{
+    position: absolute;
+    top: 43.1%;
+    width: 300px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    border-bottom: 0;
+}
+.dpt-menu>ul>li>a{
+    font-weight: var(--fw5);
+    padding: 0 1.5em;
+    border-bottom: 1px solid var(--border-color);
 }
 
 
