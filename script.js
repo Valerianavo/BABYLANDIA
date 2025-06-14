@@ -29,3 +29,14 @@ closeButton.addEventListener('click', function(){
     addClass.classList.remove('showmenu')
 })
 
+
+
+//slider
+const swiper = new Swiper('.swiper', {
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+});

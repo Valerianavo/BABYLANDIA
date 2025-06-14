@@ -6,6 +6,7 @@
     <title>BABYLANDIA</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <div id="page" class="site">
@@ -185,17 +186,42 @@
             <div class="slider">
                 <div class="container">
                     <div class="wrapper">
-                        <div class="myslider">
-                            <div class="wrapper">
-                                <div class="slide">
+                        <div class="myslider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
                                     <div class="item">
-                                        <div class="image object-cover">
-                                            <img src="../Babylandia/assets/img/ICONOS/banner inicio.png" alt="">
+                                        <div class="image object-coverr">
+                                            <img src="../Babylandia/assets/img/ICONOS/slider1.png" alt="">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="image object-coverr">
+                                            <img src="../Babylandia/assets/img/ICONOS/slider2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="image object-coverr">
+                                            <img src="../Babylandia/assets/img/ICONOS/slider3.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slider -->
+
+            <div class="brands">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <div class="item"><a href=""><img src="" alt=""></a></div>
                     </div>
                 </div>
             </div>
@@ -206,6 +232,8 @@
         <footer></footer>
         <!-- footer -->
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
