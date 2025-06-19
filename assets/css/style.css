@@ -836,9 +836,12 @@ form.search button:hover{
 /*
     RESPONSIVEE
 */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 760px){
     .products .price .current{
         font-size: 1.25em;
+    }
+    .products.mini{
+        flex: 0 0 50%;
     }
 }
 
@@ -909,6 +912,7 @@ form.search button:hover{
     .products.big .media{
         max-height: 373px;
     }
+
 }
     
     
