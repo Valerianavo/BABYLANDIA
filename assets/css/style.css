@@ -245,10 +245,10 @@ h4{
     z-index: 1;
     display: none;
 }
-:whwew(.header-top, .thetop-nav) .right ul ul li a{
+:where(.header-top, .thetop-nav) .right ul ul li a{
     padding: 0.25em 1em;
 }
-:whwew(.header-top, .thetop-nav).right ul ul li.current a{
+:where(.header-top, .thetop-nav).right ul ul li.current a{
     background-color: var(--border-color);
 }
 .header-top li:hover ul{
@@ -352,6 +352,9 @@ a.opc{
     color: var(--white-color);
     margin-bottom: -2.15em;
 }
+.dpt-cat .dpt-head .mini-text{
+    color: var(--light-bg-color);
+}
 .dpt-cat .dpt-trigger{
     position: absolute;
     right: 0;
@@ -406,7 +409,7 @@ form.search button{
     transition: var(--trns-background);
 }
 form.search button:hover{
-    background-color: var(--dark-color);
+    background-color: #edbea9;
 }
 
 /* mennu categorias */
@@ -740,7 +743,14 @@ form.search button:hover{
     display: flex;
     position: relative;
 }
-
+.products .stock-danger{
+    color: var(--primary-color);
+}
+.flexwrap .row{
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 2em;
+}
 
 
 
@@ -872,7 +882,7 @@ form.search button:hover{
     /* categorias menu */
     .dpt-menu{
         position: absolute;
-        /* top:var(--percent100); */
+        top:var(--percent100);
         width: 300px;
         background-color: var(--white-color);
         border: 1px solid var(--border-color);
