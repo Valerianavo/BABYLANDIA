@@ -450,11 +450,11 @@ form.search button:hover{
     padding: 1.5em;
 }
 .off-canvas .canvas-head{
-    color: var(--white-color);
+    color: var(--dark-color);
     justify-content: space-between;
     padding: 1.5em;
     margin: -1.5em -1.5em 1.5em;
-    background-color: var(--secondary-dark-color);
+    background-color: var(--secondary-color);
     border-bottom-right-radius: 160px 25px;
 }
 .off-canvas .canvas-head .logo{
@@ -466,13 +466,13 @@ form.search button:hover{
     width: 32px;
     height: 32px;
     border-radius: var(--percent50);
-    background-color: var(--secondary-dark-color);
-    color: var(--white-color);
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
     transition: var(--trns-background-color);
 }
 .t-close:hover{
     background-color: var(--white-color);
-    color: var(--secondary-dark-color);
+    color: var(--secondary-color);
     opacity: .75;
 }
 .off-canvas .dpt-head{
