@@ -209,9 +209,12 @@ h4{
     font-size: var(--font-smaller);
     color: var(--light--text-color);
 }
-
-
-
+.rule{
+    height: 370px;
+}
+.margen{
+    margin: 2em;
+}
 /* 
     HEADER
 */
@@ -755,10 +758,6 @@ form.search button:hover{
 
 
 
-
-
-
-
 /* big productos */
 .products.big .item{
     flex-direction: column;
@@ -787,6 +786,30 @@ form.search button:hover{
 .object-coverr{
     height: 145px;
 }
+
+/* productos destacados main*/
+.products.main .item{
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 0 0 0.938em;
+    padding: 2em;
+}
+.products.main .media{
+    height: 390px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
     Banner
@@ -836,12 +859,24 @@ form.search button:hover{
 /*
     RESPONSIVEE
 */
+
+@media screen and (min-width: 481px){
+    .products.main .item{
+        flex: 0 0 50%;
+    }
+}
+
+
+
 @media screen and (min-width: 760px){
     .products .price .current{
         font-size: 1.25em;
     }
     .products.mini{
         flex: 0 0 50%;
+    }
+    .products.main .item{
+        flex: 0 0 33.3333%;
     }
 }
 
@@ -913,6 +948,9 @@ form.search button:hover{
         max-height: 373px;
     }
 
+     .products.mini{
+        flex: 0 0 25%;
+    }
 }
     
     
