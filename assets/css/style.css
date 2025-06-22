@@ -302,12 +302,10 @@ a.opc{
 
 .circle{
     position: absolute;
-    top: -15px;
     left: 0;
     width: 38px;
     height: 38px;
     border-radius: var(--percent50);
-    background-color: var(--light-bg-color);
     z-index: -1;
 }
 .circle::before{
@@ -1074,6 +1072,59 @@ form.search button:hover{
     font-size: 1.5em;
 }
 
+* detalles del producto */
+.products.one .item{
+    flex-direction: column;
+}
+.products.one .price .discount{
+    font-size: 1em;
+    font-weight: var(--fw6);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    padding: 1em;
+    z-index: 2;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: var(--percent50);
+    margin: 0.5em;
+}
+.products.one :where(.big-image, .small-image){
+    overflow: hidden;
+}
+.products.one .big-image{
+    position: relative;
+    margin-bottom: 1em;
+}
+.products.one :where(.big-image, .small-image) img{
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+.products.one .thumbnail-show {
+    position: relative;
+    width: 130px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 2em 2em 0;
+}
+.products :is(.swiper-button-next, .swiper-button-prev){
+    outline: 0;
+    color: var(--secondary-dark-color);
+    transition: var(--trns-background), transform .3s;
+}
+.products .big-image:hover .swiper-button-next{
+    transform: translateX(10px);
+}
+.products .big-image:hover .swiper-button-prev{
+    transform: translateX(-10px);
+}
+.products :is(.swiper-button-next, .swiper-button-prev)::after{
+    font-size: 1.5em;
+}
+
 /* product description */
 .stock-sku {
     height: 30px;
@@ -1083,7 +1134,6 @@ form.search button:hover{
     font-size: var(--font-small);
     font-weight: var(--fw5);
     padding: 0.5em;
-    margin: 1em 1em 1em 0;
     margin-right: 1em;
     border-radius: 3px;
     color: #10ac84;
@@ -1096,6 +1146,7 @@ form.search button:hover{
     color: var(--dark-color);
 }
 .products.one .price{
+    font-weight: bold;
     display: flex;
     gap: 1em;
     align-items: center;
@@ -1120,37 +1171,142 @@ form.search button:hover{
     cursor: pointer;
     z-index: 1;
 }
-/* .products .variant input{
+.products .variant input{
     clip: rect(0,0,0,0);
     overflow: hidden;
     position: absolute;
     height: 0;
     width: 0;
-} */
+}
 .products .variant label::before{
     opacity: 1;
 }
+.products .variant label[for="cogrey"]::before{
+    background-color: #575757;
+}
+.products .variant label[for="coblue"]::before{
+   background-color: #45a0ff;
+}
+.products .variant label[for="cogreen"]::before{
+   background-color: #1dd1a1;
+}
+
+.single-product .variant form p input:checked + label{
+    background-color: transparent;
+    border: 2px solid var(--dark-color);
+}
 
 .products .sizes .variant label::before{
-    background-color: var(--white-color);
+    background-color: var(--secondary-color);
 }
-.products .sizes .variant label span{
-    position: absolute;
-    top: 0;
-    left: 0;
+
+
+.circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #365b6d;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.circle span {
+    top: 3px;
+    position: relative;
+    margin-left: 9px;
+    transform: translate(-50%, 0%);
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .circle {
+    border: 3px solid var(--dark-color);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+form {
+    gap: 0.5em;
+}
+
+.variant {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+.circle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+.products .actions{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+.products .qty-control{
+    width: fit-content;
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+    margin: 0 2em 2em 0;
+}
+.products .actions :where(input, button){
+    font-size: 1.25em;
+    outline: 0;
+    border: 0;
+}
+.products .actions input{
+    background-color: transparent;
+    width: 50px;
+    text-align: center;
+}
+.products .qty-control button::before{
+    background-color: transparent;
+}
+.products .actions .button-cart{
+    flex: 1;
+    max-width: 200px;
+}
+.products .actions .button-cart button{
     width: var(--percent100);
-    height: var(--percent100);
-    font-size: 0.85em;
+    cursor: pointer;
+}
+.wish-share a{
+    display: flex;
     align-items: center;
-    justify-content: center;
+    text-transform: uppercase;
+    font-weight: var(--fw6);
+    margin: 1em 2em 1em 0;
+    transition: var(--trns-color);
 }
-.single-product .sizes .variant form p input:checked +label::before{
-    background-color: var(--dark-color);
-    opacity:1 ;
+.products .collapse .has-child > a{
+    position: relative;
+    font-weight: var(--fw6);
+    text-transform: uppercase;
+    padding: 1em 1.25em;
+    border-top: 1px solid var(--dark-color);
 }
-.feature .products {
-    flex: 0 0 33.3333%;
+.products .collapse .has-child > a::before{
+    content: '+';
+    position: absolute;
+    left: 0;
 }
+
+
 
 /* 
     Page: spcial ofter

@@ -87,3 +87,4 @@ var productBig = new Swiper('.big-image',{
     swiper: productThumb,
   }
 })
+
