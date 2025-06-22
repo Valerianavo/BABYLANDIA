@@ -299,6 +299,29 @@ a.opc{
     display: flex;
     margin-right: 5em;
 }
+
+.circle{
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--percent50);
+    background-color: var(--light-bg-color);
+    z-index: -1;
+}
+.circle::before{
+    content: '';
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--percent50);
+    background-color: var(--secondary-color);
+    bottom: 5px;
+    right: 5px;
+    opacity: .4;
+}
+
 .logo{
     width: 100px;
 }
@@ -1097,18 +1120,36 @@ form.search button:hover{
     cursor: pointer;
     z-index: 1;
 }
-.products .variant input{
+/* .products .variant input{
     clip: rect(0,0,0,0);
     overflow: hidden;
     position: absolute;
     height: 0;
     width: 0;
-}
+} */
 .products .variant label::before{
     opacity: 1;
 }
-.products .variant label[for="cogrey"]::before{
-    background-color: #576574;
+
+.products .sizes .variant label::before{
+    background-color: var(--white-color);
+}
+.products .sizes .variant label span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--percent100);
+    height: var(--percent100);
+    font-size: 0.85em;
+    align-items: center;
+    justify-content: center;
+}
+.single-product .sizes .variant form p input:checked +label::before{
+    background-color: var(--dark-color);
+    opacity:1 ;
+}
+.feature .products {
+    flex: 0 0 33.3333%;
 }
 
 /* 
@@ -1352,15 +1393,17 @@ form.search button:hover{
     } 
 
     /* prodcutos */
+    
     .trending .products,
-    .product-categories .row{
+    .product-categories .row,
+    .feature .products{
         flex: 0 0 33.3333%;
     }
 
     .products.big .media{
         max-height: 373px;
     }
-    .products.main .item,
+    
     .widgets .row{
         flex: 0 0 25%;
     }
@@ -1373,5 +1416,4 @@ form.search button:hover{
         display: block;
     }
 }
-    
     
