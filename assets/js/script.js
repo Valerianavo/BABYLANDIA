@@ -15,7 +15,8 @@ function copyMenu(){
     let topPlace = document.querySelector('.off-canvas .thetop-nav');
     topPlace.innerHTML = topNav.innerHTML;
 }
-copyMenu();
+copyMenu(); 
+
 
 //menu para celulares burguer
 const menuButton = document.querySelector('.trigger'), 
@@ -29,11 +30,29 @@ closeButton.addEventListener('click', function(){
     addClass.classList.remove('showmenu')
 })
 
+//submenu para teelfonod
+const submenus = document.querySelectorAll('.has-child .icon-small');
+
+submenus.forEach((menu) => menu.addEventListener('click', toggle));
+
+function toggle(e) {
+  e.preventDefault();
+
+  // Cerrar los otros submenús
+  submenus.forEach((item) => {
+    if (item !== this) {
+      item.closest('.has-child').classList.remove('expand');
+    }
+  });
+
+  // Alternar el submenú actual
+  this.closest('.has-child').classList.toggle('expand');
+}
 
 
 //slider
 const swiper = new Swiper('.swiper', {
-  loop: true,
+  loop: true, 
 
   pagination: {
     el: '.swiper-pagination',
@@ -88,3 +107,13 @@ var productBig = new Swiper('.big-image',{
   }
 })
 
+//stock products bar witdh jsjjs
+var stocks = document.querySelectorAll('.products .stock');
+for(let x = 0; x < stocks.length; x++){
+  let stock = stocks[x].dataset.stock,
+  available = stocks[x].querySelector('.qty-available').innerHTML,
+  sold = stocks[x].querySelector('.qty-sold'),innerHTML,
+  percent = sold*100/stock;
+
+  stocks[x].querySelector('.available').style.width = percent + ' %'
+}

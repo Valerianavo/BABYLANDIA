@@ -1002,6 +1002,7 @@ form.search button:hover{
     display: block;
 }
 
+
 /* breadcrumb */
 .breadcrumb{
     font-size: var(--font-small);
@@ -1019,60 +1020,8 @@ form.search button:hover{
     color: var(--light--text-color);
 }
 
-/* detalles del producto */
-.products.one .item{
-    flex-direction: column;
-}
-.products.one .price .discount{
-    font-size: 1em;
-    font-weight: var(--fw6);
-    line-height: 1;
-    position: absolute;
-    top: 0;
-    bottom: auto;
-    padding: 1em;
-    z-index: 2;
-    background-color: var(--dark-color);
-    color: var(--white-color);
-    border-radius: var(--percent50);
-    margin: 0.5em;
-}
-.products.one :where(.big-image, .small-image){
-    overflow: hidden;
-}
-.products.one .big-image{
-    position: relative;
-    margin-bottom: 1em;
-}
-.products.one :where(.big-image, .small-image) img{
-    object-fit: cover;
-    width: var(--percent100);
-    height: var(--percent100);
-    display: block;
-}
-.products.one .thumbnail-show {
-    position: relative;
-    width: 130px;
-    height: 110px;
-    overflow: hidden;
-    margin: 0 2em 2em 0;
-}
-.products :is(.swiper-button-next, .swiper-button-prev){
-    outline: 0;
-    color: var(--secondary-dark-color);
-    transition: var(--trns-background), transform .3s;
-}
-.products .big-image:hover .swiper-button-next{
-    transform: translateX(10px);
-}
-.products .big-image:hover .swiper-button-prev{
-    transform: translateX(-10px);
-}
-.products :is(.swiper-button-next, .swiper-button-prev)::after{
-    font-size: 1.5em;
-}
 
-* detalles del producto */
+ /* detalles del producto */
 .products.one .item{
     flex-direction: column;
 }
@@ -1126,6 +1075,7 @@ form.search button:hover{
 }
 
 /* product description */
+
 .stock-sku {
     height: 30px;
     margin-top: 10px;
@@ -1180,15 +1130,6 @@ form.search button:hover{
 }
 .products .variant label::before{
     opacity: 1;
-}
-.products .variant label[for="cogrey"]::before{
-    background-color: #575757;
-}
-.products .variant label[for="coblue"]::before{
-   background-color: #45a0ff;
-}
-.products .variant label[for="cogreen"]::before{
-   background-color: #1dd1a1;
 }
 
 .single-product .variant form p input:checked + label{
@@ -1293,18 +1234,164 @@ form {
     margin: 1em 2em 1em 0;
     transition: var(--trns-color);
 }
-.products .collapse .has-child > a{
-    position: relative;
-    font-weight: var(--fw6);
-    text-transform: uppercase;
+
+.products .collapse .has-child > a {
+    position: relative ;
+    font-weight:var(--fw6);
+    text-transform:uppercase ;
     padding: 1em 1.25em;
-    border-top: 1px solid var(--dark-color);
+    border-top: 1px solid var(--border-color);
+    gap: 1em;
+    align-items: flex-start;
 }
 .products .collapse .has-child > a::before{
-    content: '+';
+    content:  '+';
     position: absolute;
     left: 0;
 }
+.products .collapse .content {
+    margin: 0 0 1.5em 2em;
+    font-size: var(--font-small);
+}
+.products .collapse .content li span:first-child{
+    min-width: 100px;
+    display: inline-flex ;
+    font-weight:var(--fw6);
+    text-transform: uppercase;
+}
+
+.products .collapse .content {
+    display: none;
+}
+.products .collapse .expand .content{
+    display: flex;
+}
+.products .collapse .expand >a::before{
+    content: '-';
+}
+
+
+
+
+/* page review form */
+.products .reviews h4 {
+    font-size: 2em;
+    color: var(--light--text-color); 
+    padding-top: 1em;
+    margin: 1em 0 0.5em;
+    border-top: 1px solid var(--border-color);
+}
+
+.products .review-block{
+    color: initial;
+}
+.products .review-block-head > a{
+    display: block;
+    font-size: 1.25em;
+    width:var(--percent100);
+    margin-top: 1em;
+    text-align: center;
+}  
+.products .review-block-head .rate-sum {
+    position: relative;
+    font-size: 4em;
+    font-weight: var(--fw6);
+    padding-right: 0.5em;
+}
+.products .review-block-head .rate-sum::before{
+    content:'';
+    width: 2px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    transform: rotate(22deg);
+    background-color: var(--light--bg-color);
+}
+.products .review-block-body .item{
+    gap: 1em;
+    padding-bottom: 2.5em;
+    margin-top: 3.5em;
+}
+.products .review-block-body :where(.person, .review-litle){
+    font-weight: var(--fw6);
+    text-transform: uppercase;
+}
+.products .review-block-body :where(.review-litle, .view-all){
+    font-size: 1.25em;
+    justify-content: end;
+}
+.products .review-block-body .item:not(:last-child){
+    border-bottom: 1px solid var(--border-color);
+}
+/*  */
+.review-form .rating{
+    flex-wrap: wrap;
+}
+.review-form p{
+    font-size: 1.25em;
+    margin-right: 1em;
+}
+.review-form .rate-this input {
+    display: none;
+}
+.review-form .rate-this label{
+    float: right;
+    font-size: 2em;
+    color: var(--secondary-dark-color);
+}
+.rate-this>input:checked ~ label,
+.rate-this:not(:checked)>label:hover,
+.rate-this:not(:checked)>label:hover ~ label{
+    color: #f1c40e;
+}
+.rate-this>input:checked+label:hover,
+.rate-this>input:checked ~ label:hover,
+.rate-this>label:hover ~ input:checked ~ label,
+.rate-this>input:checked ~ label:hover ~ label{
+    color: #ffed85;
+}
+.review-form form{
+    margin-top: 2.5em;
+}
+form p{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+form :where(input, textarea){
+    line-height: 1;
+    padding: 1em;
+    border: 1 px solid var(--border-color);
+    outline: 0;
+}
+form label{
+    font-weight: var(--fw5);
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+/*Parte añadida del video*/
+.page-single .stock{
+    margin: 2em 0;
+}
+.page-single .stock .qty span:last-child{
+    color: initial;
+}
+.page-single .stock .bar{
+    height: 10px;
+}
+.page-single .stock .bar .available{
+    margin: 0;
+    border-radius: 0;
+    background-color: var(--secondary-dark-color);
+}
+
+/*  */
+
+
+
+
 
 
 
@@ -1456,7 +1543,7 @@ form {
     .products.main .item{
         flex: 0 0 50%;
     }
-
+    
     /* page single */
     .products.one .big-image{
     margin-bottom: 2em;
@@ -1467,8 +1554,9 @@ form {
     .products.one .thumbnail-show{
         height: 160px;
     }
-}
 
+}
+    
 
 
 @media screen and (min-width: 768px){
@@ -1487,6 +1575,13 @@ form {
         flex: 0 0 50%;
         width: 50%;
     }
+
+    .products.one .is_sticky,
+    .is_sticky{
+        position: sticky;
+        top: 2em;
+    }
+
 }
 
 
@@ -1571,5 +1666,10 @@ form {
     #page.showdpt .dpt-menu{
         display: block;
     }
+    .products.one .flexwrap >.row:last-child > item{
+        padding-left: 2em;
+    }
+   
+
 }
     
