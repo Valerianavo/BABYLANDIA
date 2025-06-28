@@ -107,13 +107,13 @@ var productBig = new Swiper('.big-image',{
   }
 })
 
-//stock products bar witdh jsjjs
+//stock products bar witdh percent
 var stocks = document.querySelectorAll('.products .stock');
-for(let x = 0; x < stocks.length; x++){
+for(let x= 0; x<stocks.length; x++){
   let stock = stocks[x].dataset.stock,
   available = stocks[x].querySelector('.qty-available').innerHTML,
-  sold = stocks[x].querySelector('.qty-sold'),innerHTML,
+  sold = stocks[x].querySelector('.qty-sold').innerHTML,
   percent = sold*100/stock;
 
-  stocks[x].querySelector('.available').style.width = percent + ' %'
+  stocks[x].querySelector('.available').style.width = percent + '%';
 }
