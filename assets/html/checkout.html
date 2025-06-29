@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BABYLANDIA</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://kit.fontawesome.com/988110bf96.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="page" class="site page-category">
+        
+        <aside class="site-off desktop-hide">
+            <div class="off-canvas">
+                <div class="canvas-head flexitem">
+                    <div class="logo"><a href="/"><span>BABYLANDIA</span></a></div>
+                    <a href="#" class="t-close flexcenter"><i class="ri-close-line"></i></a>
+                </div>
+                <div class="departments"></div>
+                <nav></nav>
+                <div class="thetop-nav"></div>
+            </div>
+        </aside>
+
+        <header>
+            <div class="header-top mobile-hide">
+                <div class="container">
+                    <div class="flexitem wrapper">
+                        <div class="left">
+                            <ul class="flexitem main-links">
+                                <li><a href="#">Productos Futuros</a></li>
+                                <li><a href="#">Lista de deseos</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <ul class="flexitem main-links">
+                                <li><a href="">Registrarse</a></li>
+                                <li><a href="">Mi cuenta</a></li>
+                                <li><a href="">Seguimiento de pedidos</a></li>
+                                <li><a href="">PEN <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
+                                    <ul>
+                                        <li><a href="">PEN</a></li>
+                                        <li><a href="">USD</a></li>
+                                        <li><a href="">EURO</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Español <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
+                                    <ul>
+                                        <li><a href="">Español</a></li>
+                                        <li><a href="">English</a></li>
+                                        <li><a href="">German</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top -->
+            
+            <div class="header-nav">
+                <div class="container">
+                    <div class="wrapper flexitem">
+                        <a href="#" class="trigger desktop-hide"><span class="i ri-menu-2-line"></span></a>
+                        <div class="left flexitem">
+                            <div class="logo"><a href="/"><span>BABYLANDIA</span></a></div>
+                            <nav class="mobile-hide">
+                                <ul class="flexitem second-links">
+                                    <li><a href="/index.html" class="opc">Inicio</a></li>
+                                    <li><a href="/assets/html/shop.html" class="opc">Tienda</a></li>
+                                    <li><a href="/about-us.html" class="opc">Sobre Nosotros</a></li>
+                                    <li><a href="/blog.html" class="opc">Blog</a></li>
+                                    <li><a href="/contact.html" class="opc">Contacto</a></li>
+                                </ul>
+
+                            </nav>
+                        </div>
+                        <div class="right">
+                            <ul class="flexitem second-links">
+                                <li class="mobile-hide">
+                                <a href="#">
+                                    <div class="icon-large">
+                                    <div><i class="ri-heart-line"></i></div>
+                                    <div class="fly-item"><span class="item-number">0</span></div>
+                                    </div>
+                                </a>
+                                </li>
+
+                                <li class="iscart">
+                                    <a href="/assets/html/cart.html">
+                                        <div class="icon-large">
+                                        <div><i class="ri-shopping-cart-line"></i></div>
+                                        <div class="fly-item"><span class="item-number">0</span></div>
+                                        </div>
+                                            <div class="icon-text">
+                                            <div class="mini-text">Total</div>
+                                            <div class="cart-total">S/0.00</div>
+                                        </div>
+                                    </a>
+
+                                    <!-- mini carro -->
+                                    <div class="mini-cart">
+                                        <div class="content">
+                                            <div class="cart-head">
+                                                <span id="cart-count">0 productos en el carro</span>
+                                            </div>
+                                            <div class="cart-body">
+                                                <ul class="products mini" id="cart-items">
+                                                <!-- -->
+                                                </ul>
+                                            </div>
+                                            <div class="cart-footer">
+                                                <div class="subtotal">
+                                                <p>Subtotal</p>
+                                                <p><strong id="cart-total">S/0.00</strong></p>
+                                                </div>
+                                                <div class="actions">
+                                                <a href="/assets/html/checkout.html" class="primary-button">Pagar</a>
+                                                <a href="/assets/html/cart.html" class="secondary-button">Ver carro</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header nav -->
+
+
+        </header>
+        <!-- header -->
+
+
+        <main>
+            <div class="single-checkout">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="checkout flexwrap">
+                            <!-- FORMULARIO DE ENVÍO -->
+                            <div class="item left styled">
+                                <h1>Dirección de envío</h1>
+                                <form>
+                                    <p><label>Correo electrónico</label><input type="email" required></p>
+                                    <p><label>Nombre</label><input type="text" required></p>
+                                    <p><label>Apellido</label><input type="text" required></p>
+                                    <p><label>Ciudad</label><input type="text" required></p>
+                                    <p><label>Estado/Provincia</label><input type="text" required></p>
+                                    <p><label>Código postal</label><input type="number" required></p>
+                                    <p>
+                                        <label>País</label>
+                                        <select required>
+                                            <option value="">Selecciona</option>
+                                            <option value="PE" selected>Perú</option>
+                                            <option value="AR">Argentina</option>
+                                            <option value="VE">Venezuela</option>
+                                        </select>
+                                    </p>
+                                    <p><label>Teléfono</label><input type="number" required></p>
+                                    <p><label>Notas (opcional)</label><textarea rows="4"></textarea></p>
+                                </form>
+
+                                <div class="shipping-methods">
+                                    <h2>Métodos de Pago</h2>
+                                    <p><input type="radio" checked style="display: unset;"> <label>Yape</label></p>
+                                    <p><input type="radio"  style="display: unset;"> <label>PayPal</label></p>
+                                    <p><input type="radio"  style="display: unset;"> <label>Tarjeta de Crédito</label></p>
+                                </div>
+
+                                <div class="primary-checkout">
+                                    <button class="primary-button" onclick="finalizarPedido()">Hacer Pedido</button>
+                                </div>
+                            </div>
+
+                            <!-- RESUMEN DEL PEDIDO -->
+                            <div class="item right">
+                                <h2>Resumen del Pedido</h2>
+                                <div class="summary-order is_sticky">
+                                    <ul class="summary-totals" id="resumen-totales"></ul>
+                                    <ul class="products mini" id="resumen-productos"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+            <!-- Información de la tienda -->
+                <div class="footer-info">
+                    <p class="m-3">
+                    En Babylandia nos apasiona acompañar los primeros años de vida de tu bebé, ofreciendo productos importados     de  calidad, seguros y llenos de ternura para cada etapa.
+                    </p>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="footer-social">
+                    <p><i class="fa-brands fa-instagram"></i> 
+                        <a class="text-decoration-none text-white ancor" href="#" target="_blank">@babylandia.pe</a>
+                    </p>
+                    <p><i class="fa-brands fa-facebook"></i> 
+                        <a class="text-decoration-none text-white ancor" href="#" target="_blank">Babylandia Perú</a>
+                    </p>
+                    <p><i class="fa-solid fa-envelope"></i> 
+                        <a class="text-decoration-none text-white ancor" href="#">contacto@babylandia.pe</a>
+                    </p>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-truck"></i> Envíos: Lunes a Sábado</p>
+                    <p>De 10:00am a 6:00pm</p>
+                    <p><i class="fa-solid fa-phone"></i> Central: (01) 765 4321</p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+
+
+
+
+        <div class="menu-botton desktop-hide">
+            <div class="container">
+                <div class="wrapper">
+                    <nav>
+                        <ul class="flexitem">
+                            <li>
+                                <a href="#">
+                                    <i class="ri-bar-chart-line"></i>
+                                    <span>Tendencia</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ri-user-6-line"></i>
+                                    <span>Mi cuenta</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="ri-heart-line"></i>
+                                    <span>Lista de deseos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="t-search">
+                                    <i class="ri-search-line"></i>
+                                    <span>Buscar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#0" class="cart-trigger">
+                                    <i class="ri-shopping-cart-line"></i>
+                                    <span>Carro</span>
+                                    <div class="fly-item">
+                                        <span class="item-number">0</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- menu botton -->
+
+        <div class="search-botton desktop-hide">
+            <div class="container">
+                <div class="wrapper">
+                    <form action="" class="search">
+                        <a href="" class="t-close search-close flexcenter">
+                            <i class="ri-close-line"></i>
+                        </a>
+                        <span class="icon-large"><i class="ri-search-line"></i></span>
+                        <input type="search" placeholder="Correo electronico" required>
+                        <button type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- search botton -->
+
+
+        <div id="modal" class="modal">
+            <div class="content flexcol">
+                <div class="image object-cover">
+                    <img src="/assets/img/ROPA/1_1.jpg" alt="">
+                </div>
+                <h2>Obbtener las ultimas ofertas y cupones</h2>
+                <p class="mobile-hide">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis possimus hic fuga eligendi reiciendis inventore omnis, quas itaque voluptates optio molestias incidunt totam ducimus repudiandae ut officia, consequatur dignissimos quis.</p>
+                <form action="" class="search">
+                    <span class="icon-large"><i class="ri-mail-line"></i></span>
+                    <input type="mail" placeholder="Correo electronico">
+                    <button>Suscribete</button>
+                </form>
+                <a href="#" class="mini-text">No volver a mostrar esto</a>
+                <a href="#" class="t-close modalclose flexcenter">
+                    <i class="ri-close-line"></i>
+                </a>
+            </div>
+        </div>
+        <!-- modal -->
+
+        <div class="backtotop">
+            <a href="#" class="flexcol">
+                <i class="ri-arrow-up-line"></i>
+                <span>Arriba</span>
+            </a>
+        </div>
+
+        <div class="overlay"></div>
+    </div>
+
+
+    <script>
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const listaProductos = document.getElementById('resumen-productos');
+    const resumenTotales = document.getElementById('resumen-totales');
+
+    let subtotal = 0;
+    const envio = 10;
+
+    // Mostrar productos en resumen principal
+    listaProductos.innerHTML = "";
+    carrito.forEach(producto => {
+        const precio = parseFloat(producto.precio);
+        const cantidad = producto.cantidad || 1;
+        const totalPorProducto = precio * cantidad;
+        subtotal += totalPorProducto;
+
+        const li = document.createElement("li");
+        li.className = "item";
+        li.innerHTML = `
+            <div class="thumbnail">
+                <img src="/assets/img/${producto.imagen || 'ROPA/default.png'}" alt="${producto.nombre}">
+            </div>
+            <div class="item-content">
+                <p>${producto.nombre}</p>
+                <span class="price">
+                    <span>S/${precio.toFixed(2)}</span>
+                    <span>x ${cantidad}</span>
+                </span>
+            </div>
+        `;
+        listaProductos.appendChild(li);
+    });
+
+    const total = subtotal + envio;
+    resumenTotales.innerHTML = `
+        <li><span>Subtotal</span><span>S/${subtotal.toFixed(2)}</span></li>
+        <li><span>Descuento</span><span>-S/0.00</span></li>
+        <li><span>Envío: Fijo</span><span>S/${envio.toFixed(2)}</span></li>
+        <li><span>Total</span><strong>S/${total.toFixed(2)}</strong></li>
+    `;
+
+    // Finalizar compra
+    function finalizarPedido() {
+        if (carrito.length === 0) {
+            alert("Tu carrito está vacío.");
+            return;
+        }
+
+        alert("¡Gracias por tu compra! Tu pedido ha sido registrado.");
+        localStorage.removeItem("carrito");
+        window.location.href = "/index.html";
+    }
+
+    // Actualizar mini carrito
+    function actualizarMiniCarrito() {
+        const contenedor = document.querySelector('.mini-cart .products.mini');
+        const contador = document.querySelector('.iscart .item-number');
+        const totalElem = document.querySelector('.iscart .cart-total');
+        const totalTexto = document.querySelector('.mini-cart .subtotal strong');
+        const contadorTexto = document.querySelector('.mini-cart .cart-head');
+
+        if (!contenedor || !contador || !totalElem || !totalTexto || !contadorTexto) return;
+
+        contenedor.innerHTML = "";
+        let total = 0;
+        let cantidadTotal = 0;
+
+        carrito.forEach((item, index) => {
+            const cantidad = item.cantidad || 1;
+            const precio = parseFloat(item.precio);
+            total += precio * cantidad;
+            cantidadTotal += cantidad;
+
+            const li = document.createElement("li");
+            li.className = "item";
+            li.innerHTML = `
+                <div class="item-content">
+                    <p><a href="#">${item.nombre}</a></p>
+                    <span class="price">
+                        <span>S/${precio.toFixed(2)}</span>
+                        <span class="fly-item"><span>${cantidad}x</span></span>
+                    </span>
+                </div>
+                <a href="#" class="item-remove" onclick="eliminarDelCarrito(${index})"><i class="ri-close-line"></i></a>
+            `;
+            contenedor.appendChild(li);
+        });
+
+        contador.textContent = cantidadTotal;
+        totalElem.textContent = "S/" + total.toFixed(2);
+        totalTexto.textContent = "S/" + total.toFixed(2);
+        contadorTexto.textContent = `${carrito.length} producto${carrito.length !== 1 ? 's' : ''} en el carro`;
+    }
+
+    // Eliminar producto desde mini carrito
+    function eliminarDelCarrito(index) {
+        carrito.splice(index, 1);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarMiniCarrito();
+        location.reload(); // Recarga para reflejar cambios también en resumen
+    }
+
+    document.addEventListener("DOMContentLoaded", actualizarMiniCarrito);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

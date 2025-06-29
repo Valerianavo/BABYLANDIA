@@ -70,6 +70,7 @@
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
                                     <li><a href="/index.html" class="opc">Inicio</a></li>
+                                    <li><a href="/assets/html/shop.html" class="opc">Tienda</a></li>
                                     <li><a href="/about-us.html" class="opc">Sobre Nosotros</a></li>
                                     <li><a href="/blog.html" class="opc">Blog</a></li>
                                     <li><a href="/contact.html" class="opc">Contacto</a></li>
@@ -80,25 +81,49 @@
                         <div class="right">
                             <ul class="flexitem second-links">
                                 <li class="mobile-hide">
-                                    <a href="#">
-                                        <div class="icon-large">
-                                            <div><i class="ri-heart-line"></i></div>
-                                            <div class="fly-item"><span class="item-number">0</span></div>
-                                        </div>
-                                    </a>
+                                <a href="#">
+                                    <div class="icon-large">
+                                    <div><i class="ri-heart-line"></i></div>
+                                    <div class="fly-item"><span class="item-number">0</span></div>
+                                    </div>
+                                </a>
                                 </li>
 
-                                <li>    
-                                    <a href="#" class="iscart">
+                                <li class="iscart">
+                                    <a href="assets/html/cart.html">
                                         <div class="icon-large">
-                                            <div><i class="ri-shopping-cart-line"></i></div>
-                                            <div class="fly-item"><span class="item-number">0</span></div>
+                                        <div><i class="ri-shopping-cart-line"></i></div>
+                                        <div class="fly-item"><span class="item-number">0</span></div>
                                         </div>
-                                        <div class="icon-text">
+                                            <div class="icon-text">
                                             <div class="mini-text">Total</div>
                                             <div class="cart-total">S/0.00</div>
                                         </div>
                                     </a>
+
+                                    <!--mini carro-->
+                                    <div class="mini-cart">
+                                        <div class="content">
+                                            <div class="cart-head">
+                                                <span id="cart-count">0 productos en el carro</span>
+                                            </div>
+                                            <div class="cart-body">
+                                                <ul class="products mini" id="cart-items">
+                                                <!---->
+                                                </ul>
+                                            </div>
+                                            <div class="cart-footer">
+                                                <div class="subtotal">
+                                                <p>Subtotal</p>
+                                                <p><strong id="cart-total">S/0.00</strong></p>
+                                                </div>
+                                                <div class="actions">
+                                                <a href="assets/html/checkout.html" class="primary-button">Pagar</a>
+                                                <a href="assets/html/cart.html" class="secondary-button">Ver carro</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -252,7 +277,74 @@
             </div>
         </footer>
         <!-- footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        function agregarAlCarrito(nombre, precio, imagen) {
+            const existente = carrito.find(p => p.nombre === nombre);
+            if (existente) {
+                existente.cantidad++;
+            } else {
+                carrito.push({ nombre, precio, imagen, cantidad: 1 });
+            }
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarMiniCarrito();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarMiniCarrito();
+        }
+
+        function actualizarMiniCarrito() {
+            const contenedor = document.querySelector('.mini-cart .products.mini');
+            const contador = document.querySelector('.iscart .item-number');
+            const totalElem = document.querySelector('.iscart .cart-total');
+            const totalTexto = document.querySelector('.mini-cart .subtotal strong');
+            const contadorTexto = document.querySelector('.mini-cart .cart-head');
+
+            if (!contenedor) return;
+
+            contenedor.innerHTML = "";
+            let total = 0;
+            let cantidadTotal = 0;
+
+            carrito.forEach((item, index) => {
+                const precio = parseFloat(item.precio);
+                const cantidad = item.cantidad || 1;
+                total += precio * cantidad;
+                cantidadTotal += cantidad;
+
+                const li = document.createElement("li");
+                li.className = "item";
+                li.innerHTML = `
+                    <div class="thumbnail" style="margin-right: 10px;">
+                        <img src="/assets/img/${item.imagen}" alt="${item.nombre}" style="width: 50px; height: auto; object-fit: cover;">
+                    </div>
+                    <div class="item-content">
+                        <p><a href="#">${item.nombre}</a></p>
+                        <span class="price">
+                            <span>S/${precio.toFixed(2)}</span>
+                            <span class="fly-item"><span>${cantidad}x</span></span>
+                        </span>
+                    </div>
+                    <a href="#" class="item-remove" onclick="eliminarDelCarrito(${index})"><i class="ri-close-line"></i></a>
+                `;
+                contenedor.appendChild(li);
+            });
+
+            if (contador) contador.textContent = cantidadTotal;
+            if (totalElem) totalElem.textContent = "S/" + total.toFixed(2);
+            if (totalTexto) totalTexto.textContent = "S/" + total.toFixed(2);
+            if (contadorTexto) contadorTexto.textContent = `${carrito.length} producto${carrito.length !== 1 ? 's' : ''} en el carro`;
+        }
+
+        document.addEventListener("DOMContentLoaded", actualizarMiniCarrito);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="assets/js/pag.js"></script>
     </div>
 </body>

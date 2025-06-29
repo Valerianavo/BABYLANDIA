@@ -140,3 +140,10 @@ document.addEventListener('click', (v) =>{
 })
 
 
+//show modal on loas
+window.onload = function() {
+  document.querySelector('.site').classList.toggle('showmodal')
+}
+document.querySelector('.modalclose').addEventListener('click', function(){
+  document.querySelector('.site').classList.remove('showmodal')
+})

@@ -69,6 +69,7 @@
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
                                     <li><a href="/index.html" class="opc">Inicio</a></li>
+                                    <li><a href="/assets/html/shop.html" class="opc">Tienda</a></li>
                                     <li><a href="/about-us.html" class="opc">Sobre Nosotros</a></li>
                                     <li><a href="/blog.html" class="opc">Blog</a></li>
                                     <li><a href="/contact.html" class="opc">Contacto</a></li>
@@ -79,100 +80,50 @@
                         <div class="right">
                             <ul class="flexitem second-links">
                                 <li class="mobile-hide">
-                                    <a href="#">
-                                        <div class="icon-large">
-                                            <div><i class="ri-heart-line"></i></div>
-                                            <div class="fly-item"><span class="item-number">0</span></div>
-                                        </div>
-                                    </a>
+                                <a href="#">
+                                    <div class="icon-large">
+                                    <div><i class="ri-heart-line"></i></div>
+                                    <div class="fly-item"><span class="item-number">0</span></div>
+                                    </div>
+                                </a>
                                 </li>
 
-                                <li class="iscart">    
-                                    <a href="#">
+                                <li class="iscart">
+                                    <a href="assets/html/cart.html">
                                         <div class="icon-large">
-                                            <div><i class="ri-shopping-cart-line"></i></div>
-                                            <div class="fly-item"><span class="item-number">4</span></div>
+                                        <div><i class="ri-shopping-cart-line"></i></div>
+                                        <div class="fly-item"><span class="item-number">0</span></div>
                                         </div>
-                                        <div class="icon-text">
+                                            <div class="icon-text">
                                             <div class="mini-text">Total</div>
-                                            <div class="cart-total">S/241.79</div>
+                                            <div class="cart-total">S/0.00</div>
                                         </div>
                                     </a>
 
-                                    <!-- CARRO  -->
+                                    <!--mini carro-->
                                     <div class="mini-cart">
                                         <div class="content">
                                             <div class="cart-head">
-                                                3 productos en el carro
+                                                <span id="cart-count">0 productos en el carro</span>
                                             </div>
                                             <div class="cart-body">
-                                                <ul class="products mini">
-                                                    <li class="item">
-                                                        <div class="thumbnail image-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/1.png" alt=""></a>
-                                                        </div>
-                                                        <div class="item-content">
-                                                            <p><a href="#">Mameluco Azul Moderno</a></p>
-                                                            <span class="price">
-                                                                <span>S/80.90</span>
-                                                                <span class="fly-item"><span>1x</span></span>
-                                                            </span>
-                                                        </div>
-                                                        <a href="" class="item-remove"><i class="ri-close-line"></i></a>
-                                                    </li>
-                                                    <li class="item">
-                                                        <div class="thumbnail image-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/5.png" alt=""></a>
-                                                        </div>
-                                                        <div class="item-content">
-                                                            <p><a href="#">Mameluco Azul Moderno</a></p>
-                                                            <span class="price">
-                                                                <span>S/69.99</span>
-                                                                <span class="fly-item"><span>1x</span></span>
-                                                            </span>
-                                                        </div>
-                                                        <a href="" class="item-remove"><i class="ri-close-line"></i></a>
-                                                    </li>
-                                                    <li class="item">
-                                                        <div class="thumbnail image-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/3.png" alt=""></a>
-                                                        </div>
-                                                        <div class="item-content">
-                                                            <p><a href="#">Mameluco Azul Moderno</a></p>
-                                                            <span class="price">
-                                                                <span>S/50.00</span>
-                                                                <span class="fly-item"><span>1x</span></span>
-                                                            </span>
-                                                        </div>
-                                                        <a href="" class="item-remove"><i class="ri-close-line"></i></a>
-                                                    </li>
-                                                    <li class="item">
-                                                        <div class="thumbnail image-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/9.png" alt=""></a>
-                                                        </div>
-                                                        <div class="item-content">
-                                                            <p><a href="#">Mameluco Azul Moderno</a></p>
-                                                            <span class="price">
-                                                                <span>S/40.90</span>
-                                                                <span class="fly-item"><span>1x</span></span>
-                                                            </span>
-                                                        </div>
-                                                        <a href="" class="item-remove"><i class="ri-close-line"></i></a>
-                                                    </li>
+                                                <ul class="products mini" id="cart-items">
+                                                <!-- -->
                                                 </ul>
                                             </div>
                                             <div class="cart-footer">
                                                 <div class="subtotal">
-                                                    <p>Subtotal</p>
-                                                    <p><strong>S/241.79</strong></p>
+                                                <p>Subtotal</p>
+                                                <p><strong id="cart-total">S/0.00</strong></p>
                                                 </div>
                                                 <div class="actions">
-                                                    <a href="checkout.html" class="primary-button">Pagar</a>
-                                                    <a href="cart.html" class="secondary-button">Ver carro</a>
+                                                <a href="/assets/html/checkout.html" class="primary-button">Pagar</a>
+                                                <a href="/assets/html/cart.html" class="secondary-button">Ver carro</a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -180,295 +131,87 @@
             </div>
             <!-- header nav -->
 
-            <div class="header-main mobile-hide">
-                <div class="container">
-                    <div class="wrapper flexitem">
-                        <div class="left">
-                            <div class="dpt-cat">
-                                <div class="dpt-head">
-                                    <div class="main-text">Categorias</div>
-                                    <a href="" class="dpt-trigger mobile-hide">
-                                        <i class="ri-menu-3-line ri-xl"></i>
-                                        <i class="ri-close-line ri-xl"></i>
-                                    </a>
-                                </div>
-                                <div class="dpt-menu">
-                                    <ul class="second-links">
-                                        <li class="has-child moda">
-                                            <a href="#">
-                                                <div class="icon-large"><img src="/assets/img/ICONOS/1.png" class="img-icon"></img></div>
-                                                Moda para bebé
-                                            </a>
-                                        </li>
-                                        <li class="has-child moda">
-                                            <a href="#">
-                                                <div class="icon-large"><img src="/assets/img/ICONOS/2.png" class="img-icon"></img></div>
-                                                Conjuntos para bebé
-                                            </a>
-                                        </li>
-                                        <li class="has-child moda">
-                                            <a href="#">
-                                                <div class="icon-large"><img src="/assets/img/ICONOS/3.png" class="img-icon"></img></div>
-                                                Bodys
-                                            </a>
-                                        </li>
-                                        <li class="has-child moda">
-                                            <a href="#">
-                                                <div class="icon-large"><img src="/assets/img/ICONOS/4.png" class="img-icon"></img></div>
-                                                Ropa de dormir
-                                            </a>
-                                        </li>
-                                        <li class="has-child moda">
-                                            <a href="#">
-                                                <div class="icon-large"><img src="/assets/img/ICONOS/6.png" class="img-icon"></img></div>
-                                                Accesorios
-                                            </a>
-                                        </li>
-                                        <li class="has-child moda">
-                                            <a href="#">
-                                                <div class="icon-large"><img src="/assets/img/ICONOS/7.png" class="img-icon"></img></div>
-                                                Recien nacidos
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                            
-                        <div class="right">
-                            <div class="search-box">
-                                <form action="" class="search">
-                                    <span class="icon-large"><i class="ri-search-line"></i></span>
-                                    <input type="search"  placeholder="Buscar productos">
-                                    <button type="submit">Buscar</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- header main -->
+        
         </header>
         <!-- header -->
 
 
         <main>
-
             <div class="single-cart">
                 <div class="container">
                     <div class="wrapper">
-                        
+
                         <div class="breadcrumb">
                             <ul class="flexitem">
-                                <li><a href="">Inicio</a></li>
-                                <li>Niña</li>
+                            <li><a href="/index.html">Inicio</a></li>
+                            <li>Carrito</li>
                             </ul>
                         </div>
+
                         <div class="page-title">
                             <h1>Carrito de Compras</h1>
                         </div>
+
                         <div class="products one cart">
                             <div class="flexwrap">
-                                <form action="" class="form-cart">
+                                <form action="#" class="form-cart">
                                     <div class="item">
-                                        <table id="cart-table" class="cart-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Producto</th>
-                                                    <th>Precio</th>
-                                                    <th>Cantidad</th>
-                                                    <th>Subtotal</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/1.png" alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Mameluco Azul Moderno</a></strong>
-                                                            <p>Color: Azul</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/80.90</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="1" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/80.90</td>
-                                                    <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/5.png" alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Mameluco Azul Moderno</a></strong>
-                                                            <p>Color: Azul</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/69.99</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="1" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/80.90</td>
-                                                    <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/3.png" alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Mameluco Azul Moderno</a></strong>
-                                                            <p>Color: Azul</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/50.00</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="1" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/80.90</td>
-                                                    <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover">
-                                                            <a href="#"><img src="/assets/img/ROPA/9.png" alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Mameluco Azul Moderno</a></strong>
-                                                            <p>Color: Azul</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/40.90</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="1" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>S/80.90</td>
-                                                    <td><a href="#" class="item-remove"><i class="ri-close-line"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <table id="cart-table" class="cart-table">
+                                        <thead>
+                                        <tr>
+                                            <th>Producto</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th>Subtotal</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="cart-body">
+                                        <!-- Se llenará dinámicamente con JS -->
+                                        </tbody>
+                                    </table>
                                     </div>
                                 </form>
+
                                 <div class="cart-summary styled">
                                     <div class="item">
-                                        <div class="coupon">
-                                            <input type="text" placeholder="Ingresar cupon">
-                                            <button>Aplicar</button>
-                                        </div>
-                                        <div class="shipping-rate collapse">
-                                            <div class="has-child expand">
-                                                <a href="#" class="icon-small">Estimar envio e impuestos</a>
-                                                <div class="content">
-                                                    <div class="countries">
-                                                        <form action="">
-                                                            <label for="country">Pais</label>
-                                                            <select name="country" id="country">
-                                                                <option value=""></option>
-                                                                <option value="1">Peru</option>
-                                                                <option value="2">Venezuela</option>
-                                                                <option value="3" selected="selected"></option>
-                                                                <option value="4">Otros</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
 
-                                                    <div class="states">
-                                                        <form action="">
-                                                            <label for="state">Estado/Provincia</label>
-                                                            <select name="state" id="state">
-                                                                <option value="">Seleccione una región, estado o provincia</option>
-                                                                <option value="1">Lima</option>
-                                                                <option value="2">Ancash</option>
-                                                                <option value="2">Piura</option>
-                                                                <option value="2">Arequipa</option>
-                                                                <option value="4">Otros</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
-
-                                                    <div class="postal-code">
-                                                        <form action="">
-                                                            <label for="postal">Código postal</label>
-                                                            <input type="number" name="postal" id="postal">
-                                                        </form>
-                                                    </div>
-
-                                                    <div class="rate-options variant">
-                                                        <form action="">
-                                                            <p>
-                                                                <span>Flat: S/10.00</span>
-                                                                <input type="radio" name="rate-option" id="flat" checked>
-                                                                <label for="flat" class="circle"></label>
-                                                            </p>
-                                                            <p>
-                                                                <span>Best: S/0.00</span>
-                                                                <input type="radio" name="rate-option" id="best">
-                                                                <label for="best" class="circle"></label>
-                                                            </p>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="cart-total">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>Subtotal</th>
-                                                        <td>S/241.79</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Descuento</th>
-                                                        <td>-S/0.00<td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Envio <span class="mini-text">(Flat)</span></th>
-                                                        <td>S/10.00</td>
-                                                    </tr>
-                                                    <tr class="grand-total">
-                                                        <th>TOTAL</th>
-                                                        <td>S/251.79</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <a href="checkout.html" class="secondary-button">Pagar</a>
-                                        </div>
+                                    <!-- Resumen -->
+                                    <div class="cart-total">
+                                        <table>
+                                        <tbody>
+                                            <tr>
+                                            <th>Subtotal</th>
+                                            <td id="subtotal">S/0.00</td>
+                                            </tr>
+                                            <tr>
+                                            <th>Descuento</th>
+                                            <td>-S/0.00</td>
+                                            </tr>
+                                            <tr>
+                                            <th>Envío <span class="mini-text">(Flat)</span></th>
+                                            <td>S/10.00</td>
+                                            </tr>
+                                            <tr class="grand-total">
+                                            <th>TOTAL</th>
+                                            <td id="total">S/10.00</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                        <a href="/assets/html/checkout.html" class="secondary-button">Pagar</a>
+                                    </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-
-
         </main>
+
+
 
 
         <footer class="footer">
@@ -514,19 +257,19 @@
                             <li>
                                 <a href="#">
                                     <i class="ri-bar-chart-line"></i>
-                                    <span>Trending</span>
+                                    <span>Tendencia</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="ri-user-6-line"></i>
-                                    <span>Acoount</span>
+                                    <span>Mi cuenta</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="ri-heart-line"></i>
-                                    <span>Wishlist</span>
+                                    <span>Lista de deseos</span>
                                 </a>
                             </li>
                             <li>
@@ -538,7 +281,7 @@
                             <li>
                                 <a href="#0" class="cart-trigger">
                                     <i class="ri-shopping-cart-line"></i>
-                                    <span>Cart</span>
+                                    <span>Carro</span>
                                     <div class="fly-item">
                                         <span class="item-number">0</span>
                                     </div>
@@ -571,30 +314,120 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="/assets/js/script.js"></script>
 
     <script>
-        const FtoShow = '.filter';
-        const Fpopup = document.querySelector(FtoShow);
-        const Ftrigger = document.querySelector('.filter-trigger');
+        // Obtener carrito de localStorage
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-        Ftrigger.addEventListener('click', () => {
-            setTimeout(() => {
-                if(!Fpopup.classList.contains('show')){
-                    Fpopup.classList.add('show')
-                }
-            }, 250 )
-        })
+        // Elementos principales
+        const cartBody = document.getElementById("cart-body");
+        const subtotalEl = document.getElementById("subtotal");
+        const totalEl = document.getElementById("total");
 
-        //auto close by click outside  .filter
-        document.addEventListener('click', (v) =>{
-            const isClosest = v.target.closest(FtoShow);
-            if(!isClosest && Fpopup.classList.contains('show')){
-                Fpopup.classList.remove('show')
+        // Función para actualizar la tabla del carrito
+        function actualizarTabla() {
+            cartBody.innerHTML = "";
+            let subtotal = 0;
+
+            carrito.forEach((producto, index) => {
+                const precio = parseFloat(producto.precio);
+                const cantidad = producto.cantidad || 1;
+                const totalPorProducto = precio * cantidad;
+                subtotal += totalPorProducto;
+
+                cartBody.innerHTML += `
+                    <tr>
+                        <td class="flexitem">
+                            <div class="thumbnail object-cover">
+                                <img src="/assets/img/${producto.imagen}" alt="${producto.nombre}">
+                            </div>
+                            <div class="content">
+                                <strong>${producto.nombre}</strong>
+                            </div>
+                        </td>
+                        <td>S/${precio.toFixed(2)}</td>
+                        <td>${cantidad}</td>
+                        <td>S/${totalPorProducto.toFixed(2)}</td>
+                        <td><a href="#" class="item-remove" onclick="eliminarProducto(${index})"><i class="ri-close-line"></i></a></td>
+                    </tr>
+                `;
+            });
+
+            subtotalEl.textContent = `S/${subtotal.toFixed(2)}`;
+            totalEl.textContent = `S/${(subtotal + 10).toFixed(2)}`; // Envío fijo S/10
+        }
+
+        // Función para eliminar producto desde la tabla
+        function eliminarProducto(index) {
+            if (confirm("¿Estás segura de eliminar este producto del carrito?")) {
+                carrito.splice(index, 1);
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                actualizarTabla();
+                actualizarMiniCarrito();
             }
-        })
+        }
+
+        // Mini carrito en header
+        function actualizarMiniCarrito() {
+            const contenedor = document.querySelector('.mini-cart .products.mini');
+            const contador = document.querySelector('.iscart .item-number');
+            const totalElem = document.querySelector('.iscart .cart-total');
+            const totalTexto = document.querySelector('.mini-cart .subtotal strong');
+            const contadorTexto = document.querySelector('.mini-cart .cart-head');
+
+            if (!contenedor || !contador || !totalElem || !totalTexto || !contadorTexto) return;
+
+            contenedor.innerHTML = "";
+            let total = 0;
+            let cantidadTotal = 0;
+
+            carrito.forEach((item, index) => {
+                const cantidad = item.cantidad || 1;
+                const precio = parseFloat(item.precio);
+                total += precio * cantidad;
+                cantidadTotal += cantidad;
+
+                const li = document.createElement("li");
+                li.className = "item";
+                li.innerHTML = `
+                    <div class="thumbnail image-cover">
+                        <a href="#"><img src="/assets/img/${item.imagen}" alt="${item.nombre}"></a>
+                    </div>
+                    <div class="item-content">
+                        <p><a href="#">${item.nombre}</a></p>
+                        <span class="price">
+                            <span>S/${precio.toFixed(2)}</span>
+                            <span class="fly-item"><span>${cantidad}x</span></span>
+                        </span>
+                    </div>
+                    <a href="#" class="item-remove" onclick="eliminarDelCarrito(${index})"><i class="ri-close-line"></i></a>
+                `;
+                contenedor.appendChild(li);
+            });
+
+            contador.textContent = cantidadTotal;
+            totalElem.textContent = "S/" + total.toFixed(2);
+            totalTexto.textContent = "S/" + total.toFixed(2);
+            contadorTexto.textContent = `${carrito.length} producto${carrito.length !== 1 ? 's' : ''} en el carro`;
+        }
+
+        // Eliminar producto desde mini carrito
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarTabla();
+            actualizarMiniCarrito();
+        }
+
+        // Cargar al iniciar
+        document.addEventListener("DOMContentLoaded", () => {
+            actualizarTabla();
+            actualizarMiniCarrito();
+        });
     </script>
+
 </body>
 </html>

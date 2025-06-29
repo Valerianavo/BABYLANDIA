@@ -69,6 +69,7 @@
                             <nav class="mobile-hide">
                                 <ul class="flexitem second-links">
                                     <li><a href="/index.html" class="opc">Inicio</a></li>
+                                    <li><a href="/assets/html/shop.html" class="opc">Tienda</a></li>
                                     <li><a href="/about-us.html" class="opc">Sobre Nosotros</a></li>
                                     <li><a href="/blog.html" class="opc">Blog</a></li>
                                     <li><a href="/contact.html" class="opc">Contacto</a></li>
@@ -79,28 +80,53 @@
                         <div class="right">
                             <ul class="flexitem second-links">
                                 <li class="mobile-hide">
-                                    <a href="#">
-                                        <div class="icon-large">
-                                            <div><i class="ri-heart-line"></i></div>
-                                            <div class="fly-item"><span class="item-number">0</span></div>
-                                        </div>
-                                    </a>
+                                <a href="#">
+                                    <div class="icon-large">
+                                    <div><i class="ri-heart-line"></i></div>
+                                    <div class="fly-item"><span class="item-number">0</span></div>
+                                    </div>
+                                </a>
                                 </li>
 
-                                <li>    
-                                    <a href="#" class="iscart">
+                                <li class="iscart">
+                                    <a href="/assets/html/cart.html">
                                         <div class="icon-large">
-                                            <div><i class="ri-shopping-cart-line"></i></div>
-                                            <div class="fly-item"><span class="item-number">0</span></div>
+                                        <div><i class="ri-shopping-cart-line"></i></div>
+                                        <div class="fly-item"><span class="item-number">0</span></div>
                                         </div>
-                                        <div class="icon-text">
+                                            <div class="icon-text">
                                             <div class="mini-text">Total</div>
                                             <div class="cart-total">S/0.00</div>
                                         </div>
                                     </a>
+
+                                    <!--mini carro-->
+                                    <div class="mini-cart">
+                                        <div class="content">
+                                            <div class="cart-head">
+                                                <span id="cart-count">0 productos en el carro</span>
+                                            </div>
+                                            <div class="cart-body">
+                                                <ul class="products mini" id="cart-items">
+                                                <!---->
+                                                </ul>
+                                            </div>
+                                            <div class="cart-footer">
+                                                <div class="subtotal">
+                                                <p>Subtotal</p>
+                                                <p><strong id="cart-total">S/0.00</strong></p>
+                                                </div>
+                                                <div class="actions">
+                                                <a href="/assets/html/checkout.html" class="primary-button">Pagar</a>
+                                                <a href="/assets/html/cart.html" class="secondary-button">Ver carro</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -257,9 +283,10 @@
                                                 <span class="mini-text">(4.6)</span>
                                             </div>
                                             <div class="price">
-                                                <span class="current">S/70</span>
-                                                <span class="normal mini-text">S/100</span>
+                                                <span class="current">S/190</span>
+                                                <span class="normal mini-text">S/230</span>
                                             </div>
+                                            <button class="add-to-cart" onclick="agregarAlCarrito('Conjunto algodón recién nacido', 190, 'ROPA/1.png')">Añadir al carrito</button>
                                             <div class="mini-text">
                                                 <p>2100 vendidos</p>
                                                 <p>Free sippinf</p>
@@ -294,9 +321,10 @@
                                                 <span class="mini-text">(2.5)</span>
                                             </div>
                                             <div class="price">
-                                                <span class="current">S/70</span>
-                                                <span class="normal mini-text">S/100</span>
+                                                <span class="current">S/160</span>
+                                                <span class="normal mini-text">S/240</span>
                                             </div>
+                                             <button class="add-to-cart" onclick="agregarAlCarrito('Body + Pantalon + Vincha', 160, 'ROPA/2.png')">Añadir al carrito</button>
                                             <div class="mini-text">
                                                 <p>2100 vendidos</p>
                                                 <p>Free sippinf</p>
@@ -327,9 +355,10 @@
                                                 <span class="mini-text">(2.5)</span>
                                             </div>
                                             <div class="price">
-                                                <span class="current">S/70</span>
-                                                <span class="normal mini-text">S/100</span>
+                                                <span class="current">S/150</span>
+                                                <span class="normal mini-text">S/230</span>
                                             </div>
+                                            <button class="add-to-cart" onclick="agregarAlCarrito('Body + Pantalón grueso', 150, 'ROPA/3.png')">Añadir al carrito</button>
                                             <div class="mini-text">
                                                 <p>2100 vendidos</p>
                                                 <p>Free sippinf</p>
@@ -361,9 +390,10 @@
                                                 <span class="mini-text">(2.5)</span>
                                             </div>
                                             <div class="price">
-                                                <span class="current">S/70</span>
-                                                <span class="normal mini-text">S/100</span>
+                                                <span class="current">S/130</span>
+                                                <span class="normal mini-text">S/210</span>
                                             </div>
+                                             <button class="add-to-cart" onclick="agregarAlCarrito('Body con volantes + pantalón + diadema', 130, 'ROPA/4.png')">Añadir al carrito</button>
                                             <div class="mini-text">
                                                 <p>2100 vendidos</p>
                                                 <p>Free sippinf</p>
@@ -397,9 +427,10 @@
                                                 <span class="mini-text">(2.5)</span>
                                             </div>
                                             <div class="price">
-                                                <span class="current">S/70</span>
-                                                <span class="normal mini-text">S/100</span>
+                                                <span class="current">S/30</span>
+                                                <span class="normal mini-text">S/70</span>
                                             </div>
+                                            <button class="add-to-cart" onclick="agregarAlCarrito('Mitones de Lana Unisex', 30, 'ROPA/8.png')">Añadir al carrito</button>
                                             <div class="mini-text">
                                                 <p>2100 vendidos</p>
                                                 <p>Free sippinf</p>
@@ -431,9 +462,10 @@
                                                 <span class="mini-text">(2.5)</span>
                                             </div>
                                             <div class="price">
-                                                <span class="current">S/70</span>
-                                                <span class="normal mini-text">S/100</span>
+                                                <span class="current">S/90</span>
+                                                <span class="normal mini-text">S/130</span>
                                             </div>
+                                            <button class="add-to-cart" onclick="agregarAlCarrito('Mochila + Cambiador + Mosquitera', 90, 'ROPA/10.png')">Añadir al carrito</button>
                                             <div class="mini-text">
                                                 <p>2100 vendidos</p>
                                                 <p>Free sippinf</p>
@@ -464,9 +496,10 @@
                                                 <span class="mini-text">(2.5)</span>
                                             </div>
                                             <div class="price">
-                                                <span class="current">S/70</span>
-                                                <span class="normal mini-text">S/100</span>
+                                                <span class="current">S/170</span>
+                                                <span class="normal mini-text">S/180</span>
                                             </div>
+                                            <button class="add-to-cart" onclick="agregarAlCarrito('Conjunto de vestir 2 piezas', 170, 'ROPA/13.png')">Añadir al carrito</button>
                                             <div class="mini-text">
                                                 <p>2100 vendidos</p>
                                                 <p>Free sippinf</p>
@@ -513,12 +546,13 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(4.6)</span>
                                         </div>
-                                        <h3 class="main links"><a href="">Conjunto de algodón para recién nacido, bebés de 0 a 18 meses</a></h3>
+                                        <h3 class="main links"><a href="">Conjunto de gorritos + manoplas de algodon</a></h3>
                                        
                                         <div class="price">
-                                            <span class="current">S/70</span>
-                                            <span class="normal mini-text">S/100</span>
+                                            <span class="current">S/80</span>
+                                            <span class="normal mini-text">S/120</span>
                                         </div>
+                                        <button class="add-to-cart" onclick="agregarAlCarrito('Gorritos + manoplas', 80,'ROPA/9.png')">Añadir al carrito</button>
                                       
                                     </div>
                                 </div>
@@ -543,13 +577,13 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(4.6)</span>
                                         </div>
-                                        <h3 class="main links"><a href="">Conjunto de algodón para recién nacido, bebés de 0 a 18 meses</a></h3>
+                                        <h3 class="main links"><a href="">Body + Pantalon floreado y vincha</a></h3>
                                        
                                         <div class="price">
-                                            <span class="current">S/70</span>
-                                            <span class="normal mini-text">S/100</span>
+                                            <span class="current">S/90</span>
+                                            <span class="normal mini-text">S/150</span>
                                         </div>
-                                      
+                                        <button class="add-to-cart" onclick="agregarAlCarrito('Body + Pantalón floreado y vincha', 90, 'ROPA/5.png')">Añadir al carrito</button>
                                     </div>
                                 </div>
                                 <div class="item">
@@ -573,12 +607,13 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(4.6)</span>
                                         </div>
-                                        <h3 class="main links"><a href="">Conjunto de algodón para recién nacido, bebés de 0 a 18 meses</a></h3>
+                                        <h3 class="main links"><a href="">Enterizo color crema para bebe recien nacido</a></h3>
                                        
                                         <div class="price">
-                                            <span class="current">S/70</span>
-                                            <span class="normal mini-text">S/100</span>
+                                            <span class="current">S/50</span>
+                                            <span class="normal mini-text">S/90</span>
                                         </div>
+                                        <button class="add-to-cart" onclick="agregarAlCarrito('Enterizo crema bebé', 50, 'ROPA/12.png')">Añadir al carrito</button>
                                       
                                     </div>
                                 </div>
@@ -603,12 +638,13 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(4.6)</span>
                                         </div>
-                                        <h3 class="main links"><a href="">Conjunto de algodón para recién nacido, bebés de 0 a 18 meses</a></h3>
+                                        <h3 class="main links"><a href="">Vestido para bebe recien nacida + gorrito</a></h3>
                                        
                                         <div class="price">
-                                            <span class="current">S/70</span>
-                                            <span class="normal mini-text">S/100</span>
+                                            <span class="current">S/112.50</span>
+                                            <span class="normal mini-text">S/139.90</span>
                                         </div>
+                                        <button class="add-to-cart" onclick="agregarAlCarrito('Vestido + gorrito', 112.50, 'ROPA/7.png')">Añadir al carrito</button>
                                       
                                     </div>
                                 </div>
@@ -635,14 +671,15 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(4.6)</span>
                                         </div>
-                                        <h3 class="main links"><a href="">Conjunto de algodón para recién nacido, bebés de 0 a 18 meses</a></h3>
+                                        <h3 class="main links"><a href="">Conjunto de 2 piezas cardigan de algodon</a></h3>
                                        
                                         <div class="price">
-                                            <span class="current">S/70</span>
-                                            <span class="normal mini-text">S/100</span>
+                                            <span class="current">S/110</span>
+                                            <span class="normal mini-text">S/150</span>
                                         </div>
-                                      
+                                        <button class="add-to-cart" onclick="agregarAlCarrito('Cardigan 2 piezas algodón', 110, 'ROPA/11.png')">Añadir al carrito</button>
                                     </div>
+                                      
                                 </div>
                                 <div class="item">
                                     <div class="media">
@@ -665,12 +702,13 @@
                                             <div class="stars"></div>
                                             <span class="mini-text">(4.6)</span>
                                         </div>
-                                        <h3 class="main links"><a href="">Conjunto de algodón para recién nacido, bebés de 0 a 18 meses</a></h3>
+                                        <h3 class="main links"><a href="">Mameluco de Manga larga para bebes</a></h3>
                                        
                                         <div class="price">
-                                            <span class="current">S/70</span>
-                                            <span class="normal mini-text">S/100</span>
+                                            <span class="current">S/100</span>
+                                            <span class="normal mini-text">S/120</span>
                                         </div>
+                                        <button class="add-to-cart" onclick="agregarAlCarrito('Mameluco manga larga bebé', 100,'ROPA/6.png')">Añadir al carrito</button>
                                       
                                     </div>
                                 </div>
@@ -718,11 +756,11 @@
                                         <div class="content mini-links">
                                             <h4>Moda</h4>
                                             <ul class="flexcol">
-                                                <li><a href="">Mkeaus</a></li>
-                                                <li><a href="">Makeuo</a></li>
-                                                <li><a href="">Makeup</a></li>
-                                                <li><a href="">Makeui</a></li>
-                                                <li><a href="">Makeuh</a></li>
+                                                <li><a href="">Conjunto</a></li>
+                                                <li><a href="">100%</a></li>
+                                                <li><a href="">Algodon</a></li>
+                                                <li><a href="">Coleccion</a></li>
+                                                <li><a href="">Oferta</a></li>
                                             </ul>
                                             <div class="second-links">
                                                 <a href="" class="view-all">Ver todo<i class="ri-arrow-right-line"></i></a>
@@ -739,13 +777,13 @@
                                             </a>                                         
                                         </div>
                                         <div class="content mini-links">
-                                            <h4>Moda</h4>
+                                            <h4>Accesorios</h4>
                                             <ul class="flexcol">
-                                                <li><a href="">Mkeaus</a></li>
-                                                <li><a href="">Makeuo</a></li>
-                                                <li><a href="">Makeup</a></li>
-                                                <li><a href="">Makeui</a></li>
-                                                <li><a href="">Makeuh</a></li>
+                                                <li><a href="">Babero</a></li>
+                                                <li><a href="">100%</a></li>
+                                                <li><a href="">Algodon</a></li>
+                                                <li><a href="">Pima</a></li>
+                                                <li><a href="">Coleccion</a></li>
                                             </ul>
                                             <div class="second-links">
                                                 <a href="" class="view-all">Ver todo<i class="ri-arrow-right-line"></i></a>
@@ -764,11 +802,11 @@
                                         <div class="content mini-links">
                                             <h4>Moda</h4>
                                             <ul class="flexcol">
-                                                <li><a href="">Mkeaus</a></li>
-                                                <li><a href="">Makeuo</a></li>
-                                                <li><a href="">Makeup</a></li>
-                                                <li><a href="">Makeui</a></li>
-                                                <li><a href="">Makeuh</a></li>
+                                                <li><a href="">Ropa de baño</a></li>
+                                                <li><a href="">Coleccion</a></li>
+                                                <li><a href="">Para</a></li>
+                                                <li><a href="">Bebes</a></li>
+                                                <li><a href=""></a></li>
                                             </ul>
                                             <div class="second-links">
                                                 <a href="" class="view-all">Ver todo<i class="ri-arrow-right-line"></i></a>
@@ -830,31 +868,31 @@
                             <li>
                                 <a href="#">
                                     <i class="ri-bar-chart-line"></i>
-                                    <span>Trending</span>
+                                    <span>Tendencia</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="ri-user-6-line"></i>
-                                    <span>Acoount</span>
+                                    <span>Mi cuenta</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <i class="ri-heart-line"></i>
-                                    <span>Wishlist</span>
+                                    <span>Lista de deseos</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#0" class="t-search">
                                     <i class="ri-search-line"></i>
-                                    <span>Search</span>
+                                    <span>Buscar</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#1" class="uni">
                                     <i class="ri-shopping-cart-line"></i>
-                                    <span>Cart</span>
+                                    <span>Carrito</span>
                                     <div class="fly-item">
                                         <span class="item-number">0</span>
                                     </div>
@@ -886,8 +924,94 @@
         <div class="overlay"></div>
     </div>
 
+   <script>
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        function obtenerRutaImagen(relativePath) {
+            const rutaActual = window.location.pathname;
+            if (rutaActual.includes('/assets/html/')) {
+                return `../img/${relativePath}`;
+            } else {
+                return `assets/img/${relativePath}`;
+            }
+        }
+
+        function agregarAlCarrito(nombre, precio, imagen) {
+            const existente = carrito.find(item => item.nombre === nombre);
+            if (existente) {
+                existente.cantidad++;
+            } else {
+                carrito.push({ nombre, precio, imagen, cantidad: 1 });
+            }
+
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarMiniCarrito();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarMiniCarrito();
+        }
+
+        function actualizarMiniCarrito() {
+            const contenedor = document.querySelector('.mini-cart .products.mini');
+            const contador = document.querySelector('.iscart .item-number');
+            const totalElem = document.querySelector('.iscart .cart-total');
+            const totalTexto = document.querySelector('.mini-cart .subtotal strong');
+            const contadorTexto = document.querySelector('.mini-cart .cart-head');
+
+            if (!contenedor || !contador || !totalElem || !totalTexto || !contadorTexto) return;
+
+            contenedor.innerHTML = "";
+            let total = 0;
+            let cantidadTotal = 0;
+
+            carrito.forEach((item, index) => {
+                total += item.precio * item.cantidad;
+                cantidadTotal += item.cantidad;
+
+                const li = document.createElement("li");
+                li.className = "item";
+                li.innerHTML = `
+                    <div class="thumbnail image-cover">
+                        <img src="${obtenerRutaImagen(item.imagen || 'ROPA/default.png')}" alt="">
+                    </div>
+                    <div class="item-content">
+                        <p><a href="#">${item.nombre}</a></p>
+                        <span class="price">
+                            <span>S/${item.precio.toFixed(2)}</span>
+                            <span class="fly-item"><span>${item.cantidad}x</span></span>
+                        </span>
+                    </div>
+                    <a href="#" class="item-remove" onclick="eliminarDelCarrito(${index})"><i class="ri-close-line"></i></a>
+                `;
+                contenedor.appendChild(li);
+            });
+
+            contador.textContent = cantidadTotal;
+            totalElem.textContent = "S/" + total.toFixed(2);
+            totalTexto.textContent = "S/" + total.toFixed(2);
+            contadorTexto.textContent = `${carrito.length} producto${carrito.length !== 1 ? 's' : ''} en el carro`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            actualizarMiniCarrito();
+
+            const isCartLink = document.querySelector(".iscart > a");
+            if (isCartLink) {
+                isCartLink.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.location.href = "assets/html/cart.html";
+                });
+            }
+        });
+    </script>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
