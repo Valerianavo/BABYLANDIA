@@ -1468,7 +1468,7 @@ form label{
     color: var(--light--text-color);
 }
 input[type="range"]{
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     width: var(--percent100);
 }
 input[type="range"]:focus{
