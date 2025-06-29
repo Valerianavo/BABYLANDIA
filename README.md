@@ -48,4 +48,4 @@ Visualiza el mini carrito.
 Haz clic en "Cargar más" para ver más productos.
 
 ---
-# Desarrollado por Valeria Ortiz
+### Desarrollado por Valeria Ortiz
