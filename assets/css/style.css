@@ -623,6 +623,13 @@ form.search button:hover{
 
 
 /* todoos los prodctos */
+.add-to-cart{
+    color: var(--dark-color);
+    background-color: var(--light-bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 3px;
+}
+
 .products .offer{
     text-align: center;
     margin-bottom: 1.5em;
@@ -1402,7 +1409,7 @@ form label{
 
 
 /* 
-    Page: category
+    Page: shop
 */
 .single-category .holder{
     display: flex;
