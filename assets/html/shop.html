@@ -252,7 +252,7 @@
                                             
                                             <div class="cat-navigation flexitem">
                                                 <div class="second-links">
-                                                    <a href="/index.html" class="view-all" ">Regresar<i class="ri-arrow-left-line"></i></a>
+                                                    <a href="./../../index.html" class="view-all" ">Regresar<i class="ri-arrow-left-line"></i></a>
                                                 </div>
                                                 <!-- <div class="item-filter desktop-hide">
                                                     <a href="#" class="filter-trigger label">
@@ -713,6 +713,58 @@
         <div class="overlay"></div>
     </div>
 
+
+    <script>
+        const FtoShow = '.filter';
+        const Fpopup = document.querySelector(FtoShow);
+        const Ftrigger = document.querySelector('.filter-trigger');
+
+        Ftrigger.addEventListener('click', () => {
+            setTimeout(() => {
+                if(!Fpopup.classList.contains('show')){
+                    Fpopup.classList.add('show')
+                }
+            }, 250 )
+        })
+
+        //auto close by click outside  .filter
+        document.addEventListener('click', (v) =>{
+            const isClosest = v.target.closest(FtoShow);
+            if(!isClosest && Fpopup.classList.contains('show')){
+                Fpopup.classList.remove('show')
+            }
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const productos = document.querySelectorAll(".products.main .item");
+        const boton = document.getElementById("cargar-mas");
+        let productosMostrados = 0;
+        const productosPorCarga = 6;
+
+        function mostrarProductos() {
+            for (let i = productosMostrados; i < productosMostrados + productosPorCarga; i++) {
+                if (productos[i]) {
+                    productos[i].style.display = "block";
+                }
+            }
+            productosMostrados += productosPorCarga;
+
+            if (productosMostrados >= productos.length) {
+                boton.style.display = "none";
+            }
+        }
+
+        // Mostrar los primeros 6 al cargar la página
+        mostrarProductos();
+
+        boton.addEventListener("click", function (e) {
+            e.preventDefault();
+            mostrarProductos();
+        });
+    });
+
+    </script>
+
     <script>
         let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -783,54 +835,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.js"></script>
     <script src="/assets/js/script.js"></script>
 
-    <script>
-        const FtoShow = '.filter';
-        const Fpopup = document.querySelector(FtoShow);
-        const Ftrigger = document.querySelector('.filter-trigger');
-
-        Ftrigger.addEventListener('click', () => {
-            setTimeout(() => {
-                if(!Fpopup.classList.contains('show')){
-                    Fpopup.classList.add('show')
-                }
-            }, 250 )
-        })
-
-        //auto close by click outside  .filter
-        document.addEventListener('click', (v) =>{
-            const isClosest = v.target.closest(FtoShow);
-            if(!isClosest && Fpopup.classList.contains('show')){
-                Fpopup.classList.remove('show')
-            }
-        })
-        document.addEventListener("DOMContentLoaded", function () {
-        const productos = document.querySelectorAll(".products.main .item");
-        const boton = document.getElementById("cargar-mas");
-        let productosMostrados = 0;
-        const productosPorCarga = 6;
-
-        function mostrarProductos() {
-            for (let i = productosMostrados; i < productosMostrados + productosPorCarga; i++) {
-                if (productos[i]) {
-                    productos[i].style.display = "block";
-                }
-            }
-            productosMostrados += productosPorCarga;
-
-            if (productosMostrados >= productos.length) {
-                boton.style.display = "none";
-            }
-        }
-
-        // Mostrar los primeros 6 al cargar la página
-        mostrarProductos();
-
-        boton.addEventListener("click", function (e) {
-            e.preventDefault();
-            mostrarProductos();
-        });
-    });
-
-    </script>
+    
 </body>
 </html>
