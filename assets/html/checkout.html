@@ -339,7 +339,7 @@
         li.className = "item";
         li.innerHTML = `
             <div class="thumbnail">
-                <img src="/assets/img/${producto.imagen || 'ROPA/default.png'}" alt="${producto.nombre}">
+                <img src="../img/${producto.imagen || 'ROPA/default.png'}" alt="${producto.nombre}">
             </div>
             <div class="item-content">
                 <p>${producto.nombre}</p>
@@ -418,7 +418,7 @@
         carrito.splice(index, 1);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarMiniCarrito();
-        location.reload(); // Recarga para reflejar cambios también en resumen
+        location.reload(); 
     }
 
     document.addEventListener("DOMContentLoaded", actualizarMiniCarrito);
