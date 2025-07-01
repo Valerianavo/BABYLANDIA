@@ -1973,7 +1973,9 @@ input[type="range"]::-webkit-slider-thumb{
     background-color: var(--dark-color);
     color: var(--white-color);
 }
-
+header .header-nav .right{
+    display: none;
+}
 
 
 
@@ -2170,6 +2172,7 @@ input[type="range"]::-webkit-slider-thumb{
     .checkout .item.right{
         padding: 5em 0 0 5em;
     }
+    
 }
 
 
@@ -2186,6 +2189,11 @@ input[type="range"]::-webkit-slider-thumb{
     .mobile-hide{
         display: block;
     }
+
+    header .header-nav .right{
+        display: block;
+    }
+    
     .logo a{
         margin-right: 5em;
     }
@@ -2291,5 +2299,7 @@ input[type="range"]::-webkit-slider-thumb{
         padding-left: 2.5em;
         margin-top: 0;
     }
+
+    
 }
     
