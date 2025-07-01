@@ -890,7 +890,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#1" class="uni">
+                                <a href="#1" class="cart-mobile">
                                     <i class="ri-shopping-cart-line"></i>
                                     <span>Carrito</span>
                                     <div class="fly-item">
@@ -898,6 +898,7 @@
                                     </div>
                                 </a>
                             </li>
+
                         </ul>
                     </nav>
                 </div>
@@ -924,7 +925,7 @@
         <div class="overlay"></div>
     </div>
 
-   <script>
+    <script>
         let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
         function obtenerRutaImagen(relativePath) {
@@ -1005,6 +1006,29 @@
                     window.location.href = "assets/html/cart.html";
                 });
             }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Activar mini carrito desde ícono móvil
+            const iconoCarritoMobile = document.querySelector(".cart-mobile");
+            const miniCarrito = document.querySelector(".mini-cart");
+
+            if (iconoCarritoMobile && miniCarrito) {
+                iconoCarritoMobile.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    // Alternar visibilidad del carrito flotante
+                    miniCarrito.classList.toggle("show"); // Puedes cambiar esta clase por la que uses (como 'activo' o 'open')
+                });
+            }
+
+            // Opcional: cerrar mini carrito si haces clic fuera
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest('.mini-cart') && !e.target.closest('.cart-mobile')) {
+                    miniCarrito.classList.remove("show");
+                }
+            });
         });
     </script>
 
