@@ -899,7 +899,6 @@
                                 </a>
                             </li>
 
-
                         </ul>
                     </nav>
                 </div>
@@ -927,111 +926,88 @@
     </div>
 
     <script>
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    function obtenerRutaImagen(relativePath) {
-        const rutaActual = window.location.pathname;
-        if (rutaActual.includes('/assets/html/')) {
-            return `../img/${relativePath}`;
-        } else {
-            return `assets/img/${relativePath}`;
-        }
-    }
-
-    function agregarAlCarrito(nombre, precio, imagen) {
-        const existente = carrito.find(item => item.nombre === nombre);
-        if (existente) {
-            existente.cantidad++;
-        } else {
-            carrito.push({ nombre, precio, imagen, cantidad: 1 });
+        function obtenerRutaImagen(relativePath) {
+            const rutaActual = window.location.pathname;
+            if (rutaActual.includes('/assets/html/')) {
+                return `../img/${relativePath}`;
+            } else {
+                return `assets/img/${relativePath}`;
+            }
         }
 
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        actualizarMiniCarrito();
-    }
+        function agregarAlCarrito(nombre, precio, imagen) {
+            const existente = carrito.find(item => item.nombre === nombre);
+            if (existente) {
+                existente.cantidad++;
+            } else {
+                carrito.push({ nombre, precio, imagen, cantidad: 1 });
+            }
 
-    function eliminarDelCarrito(index) {
-        carrito.splice(index, 1);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        actualizarMiniCarrito();
-    }
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarMiniCarrito();
+        }
 
-    function actualizarMiniCarrito() {
-        const contenedor = document.querySelector('.mini-cart .products.mini');
-        const contador = document.querySelectorAll('.item-number'); // todos los contadores
-        const totalElem = document.querySelector('.cart-total');
-        const totalTexto = document.querySelector('.mini-cart .subtotal strong');
-        const contadorTexto = document.querySelector('.mini-cart .cart-head');
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarMiniCarrito();
+        }
 
-        if (!contenedor || !contadorTexto || !totalTexto) return;
+        function actualizarMiniCarrito() {
+            const contenedor = document.querySelector('.mini-cart .products.mini');
+            const contador = document.querySelector('.iscart .item-number');
+            const totalElem = document.querySelector('.iscart .cart-total');
+            const totalTexto = document.querySelector('.mini-cart .subtotal strong');
+            const contadorTexto = document.querySelector('.mini-cart .cart-head');
 
-        contenedor.innerHTML = "";
-        let total = 0;
-        let cantidadTotal = 0;
+            if (!contenedor || !contador || !totalElem || !totalTexto || !contadorTexto) return;
 
-        carrito.forEach((item, index) => {
-            total += item.precio * item.cantidad;
-            cantidadTotal += item.cantidad;
+            contenedor.innerHTML = "";
+            let total = 0;
+            let cantidadTotal = 0;
 
-            const li = document.createElement("li");
-            li.className = "item";
-            li.innerHTML = `
-                <div class="thumbnail">
-                    <img src="${obtenerRutaImagen(item.imagen || 'ROPA/default.png')}" alt="${item.nombre}">
-                </div>
-                <div class="item-content">
-                    <p><a href="#">${item.nombre}</a></p>
-                    <span class="price">
-                        <span>S/${item.precio.toFixed(2)}</span>
-                        <span class="fly-item"><span>${item.cantidad}x</span></span>
-                    </span>
-                </div>
-                <a href="#" class="item-remove" onclick="eliminarDelCarrito(${index})"><i class="ri-close-line"></i></a>
-            `;
-            contenedor.appendChild(li);
-        });
+            carrito.forEach((item, index) => {
+                total += item.precio * item.cantidad;
+                cantidadTotal += item.cantidad;
 
-        contador.forEach(el => el.textContent = cantidadTotal);
-        if (totalElem) totalElem.textContent = "S/" + total.toFixed(2);
-        totalTexto.textContent = "S/" + total.toFixed(2);
-        contadorTexto.textContent = `${carrito.length} producto${carrito.length !== 1 ? 's' : ''} en el carro`;
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        actualizarMiniCarrito();
-
-        const carritoToggle = document.querySelector(".mini-cart");
-        const cartBtnDesktop = document.querySelector(".iscart > a");
-        const cartBtnMobile = document.querySelector(".cart-mobile");
-
-        // Mostrar/ocultar mini carrito desde escritorio
-        if (cartBtnDesktop) {
-            cartBtnDesktop.addEventListener("click", function (e) {
-                e.preventDefault();
-                carritoToggle?.classList.toggle("show");
+                const li = document.createElement("li");
+                li.className = "item";
+                li.innerHTML = `
+                    <div class="thumbnail image-cover">
+                        <img src="${obtenerRutaImagen(item.imagen || 'ROPA/default.png')}" alt="">
+                    </div>
+                    <div class="item-content">
+                        <p><a href="#">${item.nombre}</a></p>
+                        <span class="price">
+                            <span>S/${item.precio.toFixed(2)}</span>
+                            <span class="fly-item"><span>${item.cantidad}x</span></span>
+                        </span>
+                    </div>
+                    <a href="#" class="item-remove" onclick="eliminarDelCarrito(${index})"><i class="ri-close-line"></i></a>
+                `;
+                contenedor.appendChild(li);
             });
+
+            contador.textContent = cantidadTotal;
+            totalElem.textContent = "S/" + total.toFixed(2);
+            totalTexto.textContent = "S/" + total.toFixed(2);
+            contadorTexto.textContent = `${carrito.length} producto${carrito.length !== 1 ? 's' : ''} en el carro`;
         }
 
-        // Mostrar/ocultar mini carrito desde el menú inferior en móviles
-        if (cartBtnMobile) {
-            cartBtnMobile.addEventListener("click", function (e) {
-                e.preventDefault();
-                carritoToggle?.classList.toggle("show");
-            });
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            actualizarMiniCarrito();
 
-        // Cerrar el carrito si se hace clic fuera de él
-        document.addEventListener("click", function (e) {
-            const isInsideCart = e.target.closest('.mini-cart');
-            const isTrigger = e.target.closest('.iscart') || e.target.closest('.cart-mobile');
-
-            if (!isInsideCart && !isTrigger) {
-                carritoToggle?.classList.remove("show");
+            const isCartLink = document.querySelector(".iscart > a");
+            if (isCartLink) {
+                isCartLink.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.location.href = "assets/html/cart.html";
+                });
             }
         });
-    });
     </script>
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
