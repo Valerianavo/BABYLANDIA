@@ -2140,6 +2140,48 @@ input[type="range"]::-webkit-slider-thumb{
     
 }    
 
+@media screen and (max-width: 480px) {
+
+    .trigger{
+        padding: 0;
+    }
+    .icon-large{
+        padding: 0;
+    }
+    .header-nav .left {
+        flex: 1 1 60%;
+        display: flex;
+        align-items: center;
+    }
+
+    .header-nav .logo a span {
+        font-size: 0.85em; 
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+
+    .header-nav .right {
+        flex: 1 1 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .header-nav .right .icon-text {
+        display: none; 
+    }
+
+    .header-nav .iscart i {
+        font-size: 20px;
+    }
+    .header-nav .trigger {
+        font-size: 24px;
+        margin-right: 12px;
+    }
+}
+
+
 
 @media screen and (min-width: 768px){
     .products .price .current{
